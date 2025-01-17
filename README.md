@@ -3,12 +3,61 @@
 ## Overview
 The Revenue Dashboard is a Streamlit application designed for visualizing and analyzing revenue data. The application enables users to upload CSV files containing revenue data, store them in a MySQL database, and perform various analyses, such as identifying the highest revenue-generating cities and plans.
 
+
+## Backend
+
+### DatabaseConnectionManager (`dbcon.py`)
+- Manages database connections with error handling using a context manager.
+- Ensures proper closure of connections and cursors.
+
+### DatabaseManager (`databasemanager.py`)
+- Handles database interactions such as table creation, data insertion, and querying.
+- Includes methods for specific analyses (e.g., fetching records with max revenue, plans with max revenue, and city counts).
+
+### FileProcessor (`fileprocessor.py`)
+- Processes single and multiple uploaded CSV files.
+- Prevents duplicate file processing by maintaining a table of imported files.
+- Validates and parses CSV files into the required format for database insertion.
+
+---
+
+## Frontend
+
+### App (`app.py`)
+- Sets up the Streamlit UI, including file uploaders, analysis display, and data visualization.
+- Integrates backend functionality into an interactive user interface.
+
+### AnalysisManager (`analysis.py`)
+- Conducts analytical queries and displays results in Streamlit.
+- Includes multiple analyses like total revenue, top-performing cities/plans, and city contributions.
+- Provides data visualizations (e.g., revenue trends, bar charts).
+
+---
+
+## Key Features
+
+### Database Management
+- Automated table creation for storing imported files and revenue data.
+- Efficient data insertion and validation.
+
+### Data Analysis
+- Specific queries to identify top-performing entities and trends.
+
+### Visualizations
+- Uses Plotly to provide clear and interactive charts.
+- Displays aggregated monthly revenue trends and city-wise revenue distributions.
+
+### Error Handling
+- Handles common database and file parsing issues with detailed logging.
+
+
 ## Features
 - **File Upload and Data Processing:**
   - Upload one or more CSV files.
   - Check if a file has already been imported to prevent duplicate uploads.
   - Parse and clean data, including handling missing or invalid dates.
   - Store data in a MySQL database for further analysis.
+  - Provide Data Driven Analysis and Generate Dynamic Vi
 
 - **Database Management:**
   - Create necessary tables (`imported_files`, `revenue_data`) automatically.
@@ -28,18 +77,20 @@ The Revenue Dashboard is a Streamlit application designed for visualizing and an
 
 ## Folder Structure
 ```
-project-root/
-├── app.py
+project/
 ├── backend/
 │   ├── dbcon.py
 │   ├── databasemanager.py
 │   ├── fileprocessor.py
-└── README.md
+├── frontend/
+│   ├── app.py
+│   ├── analysis.py
 
 
 ```
 Floder Structure image
-![image](https://github.com/user-attachments/assets/c753f4e8-aa61-496e-8a42-6bf1acc018c3)
+![image](https://github.com/user-attachments/assets/9ba229c0-6a6d-40c4-b5f0-cdf8b2b48066)
+
 
 ## Requirements
 - Python 3.12
@@ -109,6 +160,9 @@ Processes CSV files:
 ### 4. `app.py`
 Main Streamlit application:
 - User interface for uploading files and visualizing data.
+- Diplaying all the records that has been uploaded
+### 5. 'analysis.py'
+Data Analysis & Visualization
 - Performs analysis and displays results.
 - Generates interactive charts using Plotly.
 
