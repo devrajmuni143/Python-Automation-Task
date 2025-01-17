@@ -51,7 +51,7 @@ The Revenue Dashboard is a Streamlit application designed for visualizing and an
 - Handles common database and file parsing issues with detailed logging.
 
 
-## Features
+## Higlighted Features
 - **File Upload and Data Processing:**
   - Upload one or more CSV files.
   - Check if a file has already been imported to prevent duplicate uploads.
