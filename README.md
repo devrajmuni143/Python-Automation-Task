@@ -35,10 +35,11 @@ project-root/
 │   ├── databasemanager.py
 │   ├── fileprocessor.py
 └── README.md
-* Floder Structure image
-![image](https://github.com/user-attachments/assets/c753f4e8-aa61-496e-8a42-6bf1acc018c3)
+
 
 ```
+Floder Structure image
+![image](https://github.com/user-attachments/assets/c753f4e8-aa61-496e-8a42-6bf1acc018c3)
 
 ## Requirements
 - Python 3.12
