@@ -80,7 +80,7 @@ Floder Structure image
 ## Usage
 1. Launch the app by running the `streamlit` command.
 2. Upload CSV files containing revenue data. Ensure the CSV files have the following columns:
-   - `date` (YYYY-MM-DD format)
+   - `date` (DD-MM-YYYY format)
    - `city_code` (Integer)
    - `plans` (String)
    - `plan_revenue_crores` (Float)
