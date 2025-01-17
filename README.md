@@ -34,23 +34,6 @@ The Revenue Dashboard is a Streamlit application designed for visualizing and an
 
 ---
 
-## Key Features
-
-### Database Management
-- Automated table creation for storing imported files and revenue data.
-- Efficient data insertion and validation.
-
-### Data Analysis
-- Specific queries to identify top-performing entities and trends.
-
-### Visualizations
-- Uses Plotly to provide clear and interactive charts.
-- Displays aggregated monthly revenue trends and city-wise revenue distributions.
-
-### Error Handling
-- Handles common database and file parsing issues with detailed logging.
-
-
 ## Higlighted Features
 - **File Upload and Data Processing:**
   - Upload one or more CSV files.
@@ -60,13 +43,18 @@ The Revenue Dashboard is a Streamlit application designed for visualizing and an
   - Provide Data Driven Analysis and Generate Dynamic Vi
 
 - **Database Management:**
-  - Create necessary tables (`imported_files`, `revenue_data`) automatically.
+  - Automated table creation for storing imported files and revenue data.
   - Insert revenue data into the database.
   - Perform queries for analysis and insights.
-
+  - Efficient data insertion and validation.
+    
 - **Data Visualization:**
+  - Uses Plotly to provide clear and interactive charts.  
   - Interactive bar chart to visualize revenue by city.
   - Line chart to track revenue trends over time.
+
+  **Error Handling**
+  - Handles common database and file parsing issues with detailed logging.
 
 - **Data Analysis:**
   - Total revenue across all plans and cities.
