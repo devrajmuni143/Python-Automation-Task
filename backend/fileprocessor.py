@@ -16,7 +16,7 @@ class FileProcessor:
 
             try:
                 # Reading and processing the file
-                df = pd.read_csv(uploaded_file)
+                df = pd.read_csv(uploaded_file,dtype={'city_code': str})
                 df['date'] = pd.to_datetime(df['date'], format='mixed', errors='coerce')
                 df = df.dropna(subset=['date'])
                 df['date'] = df['date'].dt.strftime('%Y-%m-%d')
